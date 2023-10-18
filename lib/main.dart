@@ -75,6 +75,7 @@ class _MyHomePageState extends State<MyHomePage> {
         ),
       ),
       floatingActionButton: FloatingActionButton(
+        elevation: 20,
         backgroundColor: const Color.fromARGB(255, 222, 10, 204),
         onPressed: _showImage,
         child: const Icon(Icons.add, color: Colors.white)
@@ -262,16 +263,16 @@ class ImageContainer extends StatefulWidget {
 class _ImageContainerState extends State<ImageContainer> {
 
   List<String> images = [
-    "https://picsum.photos/300/300?random=0",
-    "https://picsum.photos/300/300?random=1",
-    'https://picsum.photos/300/300?random=2',
-    'https://picsum.photos/300/300?random=3',
-    'https://picsum.photos/300/300?random=4',
-    'https://picsum.photos/300/300?random=5',
-    'https://picsum.photos/300/300?random=6',
-    'https://picsum.photos/300/300?random=7',
-    'https://picsum.photos/300/300?random=8',
-    'https://picsum.photos/300/300?random=9',
+    "https://picsum.photos/id/1/300/300",
+    "https://picsum.photos/id/2/300/300",
+    'https://picsum.photos/id/3/300/300',
+    'https://picsum.photos/id/4/300/300',
+    'https://picsum.photos/id/5/300/300',
+    'https://picsum.photos/id/6/300/300',
+    'https://picsum.photos/id/7/300/300',
+    'https://picsum.photos/id/8/300/300',
+    'https://picsum.photos/id/9/300/300',
+    'https://picsum.photos/id/10/300/300',
   ];
 
   @override
@@ -289,7 +290,8 @@ class _ImageContainerState extends State<ImageContainer> {
             ]),
         child: ClipRRect(
             borderRadius: BorderRadius.circular(40.0),
-            child: Image.network(images[int.parse(widget.imageIndex)])),
+            child: Image.network(images[int.parse(widget.imageIndex)])
+        ),
       ),
     ],);
   }
